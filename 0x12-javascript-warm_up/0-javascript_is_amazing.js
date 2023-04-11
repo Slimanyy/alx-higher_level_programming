@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 /**
-prints "string";
+  prints "string";
 */
 
-const myVar = "Javascript is amazing";
+const myVar = 'Javascript is amazing';
 console.log(myVar);
