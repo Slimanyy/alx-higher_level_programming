@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    script that takes in a URL, sends a request to the URL handling error
+    a python script that takes and sends a request to the URL handling error, after taking the URL
 """
 
 

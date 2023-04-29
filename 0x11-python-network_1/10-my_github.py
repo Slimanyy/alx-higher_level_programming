@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    script that get information about user from github api
+     a Python script that takes your GitHub credentials (username and password) and uses the GitHub API to display your id.
 """
 
 

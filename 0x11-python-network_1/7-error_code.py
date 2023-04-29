@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-    script that takes in a URL, sends a request to the URL handling error
+    a pyscript
 """
-
 
 import requests
 import sys
