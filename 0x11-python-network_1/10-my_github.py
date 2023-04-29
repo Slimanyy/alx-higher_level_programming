@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    script that takes in a letter and sends a POST request with parameter
+    script that get information about user from github api
 """
 
 
@@ -21,10 +21,8 @@ def is_valid_json(data) -> bool:
 
 if __name__ == "__main__":
     try:
-        url = "http://0.0.0.0:5000/search_user"
-        letter = "" if len(sys.argv) == 1 else sys.argv[1]
-        values = {'q': letter}
-        response = requests.post(url=url, data=values)
+        url = "https://api.github.com/user"
+        response = requests.get(url=url, auth=(sys.argv[1], sys.argv[2]))
         if not is_valid_json(response):
             print("Not a valid JSON")
         else:
@@ -32,6 +30,6 @@ if __name__ == "__main__":
             if (len(content) == 0):
                 print("No result")
             else:
-                print("[{}] {}".format(content['id'], content['name']))
+                print("{}".format(content.get("id")))
     except requests.exceptions.HTTPError as exception:
         print("Error code: {}".format(exception.response.status_code))
